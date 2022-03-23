@@ -19,12 +19,15 @@
 <body>
 
     <!--Header Section-->
-    <section class="bg-gradient pt-5 pb-6">
+    <section class=" pt-5 pb-6">
         <div class="container">
             <div class="row">
                 <div class="col-12 d-flex flex-row align-items-center justify-content-between">
-                    <div class="heading-brand">KasidatePLUS</div>
+                    <div class="heading-brand">KasidatePLUS
+                        <span class="">DEV</span>
+                    </div>
                     <a href="https://kasidate.me" class="btn btn-dark" target="_blank">HOME</a>
+                    
                 </div>
             </div>
             <div class="row mt-6">
@@ -34,9 +37,9 @@
                         Here, we'll collect the extension, subcomponent, add-on and elements used on all of
                         our websites and services.
                     </p>
-                    <a href="https://github.com/KasidatePLUS/kasp-extension" class="btn btn-success svg-icon">
+                    <a href="https://github.com/KasidatePLUS/kasp-extension" class="btn btn-warning svg-icon">
                         <em class="mr-2" data-feather="github"></em>
-                        Contribute
+                        Contribute : KasidatePLUS/extension
                     </a>
                 </div>
             </div>
@@ -48,7 +51,7 @@
                             <div class="orange"></div>
                             <div class="green"></div>
                         </div>
-                        <pre class="language-javascript line-numbers"><code class="language-javascript"> // KasidatePLUS
+                        <pre class="language-javascript line-numbers"><code class="language-javascript">    // KasidatePLUS
 import {KasidateP} from '@KasidateP/kasidate.me';
 
 import {KasP, KasidatePLUS} from '@KasidatePLUS/kasp-extension';
@@ -63,16 +66,22 @@ export class KasidateP implements KasidatePLUS {
       color: color
     }));
   }
-}</code></pre>
+}
+
+
+</code>
+</pre>
                     </div>
                 </div>
-            </div>
-        </div>
+            
+        
       
             <div class="col-md-4 mx-auto text-muted kasp-footer text-center small-xl">
-                <div  id="year"></div>
+                <div class="lead mb-1" id="year">
+                </div>
+                </div>
             </div>
-   
+   </div>
   </section>
 
     <!--footer-->
