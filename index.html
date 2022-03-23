@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>KasidatePLUS - Kasidate Extension </title>
+    <meta name="description" content="KasidatePLUS - Kasidate Extension" />
+
+    <!--Google font-->
+    <link href="https://fonts.googleapis.com/css?family=K2D:300,400,500,700,800" rel="stylesheet">
+
+    <!-- Bootstrap CSS / Color Scheme -->
+    <link rel="stylesheet" href="web-assets/css/bootstrap.css">
+    <link rel="stylesheet" href="web-assets/css/kasp-web.css">
+</head>
+
+<body>
+
+    <!--Header Section-->
+    <section class="bg-gradient pt-5 pb-6">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex flex-row align-items-center justify-content-between">
+                    <div class="heading-brand">KasidatePLUS</div>
+                    <a href="https://kasidate.me" class="btn btn-dark" target="_blank">HOME</a>
+                </div>
+            </div>
+            <div class="row mt-6">
+                <div class="col-md-8 mx-auto text-center">
+                    <h1>Find the right extension for you.</h1>
+                    <p class="lead mb-5">
+                        Here, we'll collect the extension, subcomponent, add-on and elements used on all of
+                        our websites and services.
+                    </p>
+                    <a href="https://github.com/KasidatePLUS/kasp-extension" class="btn btn-success svg-icon">
+                        <em class="mr-2" data-feather="github"></em>
+                        Contribute
+                    </a>
+                </div>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-9 mx-auto">
+                    <div class="code-window">
+                        <div class="dots">
+                            <div class="red"></div>
+                            <div class="orange"></div>
+                            <div class="green"></div>
+                        </div>
+                        <pre class="language-javascript line-numbers"><code class="language-javascript"> // KasidatePLUS
+import {KasidateP} from '@KasidateP/kasidate.me';
+
+import {KasP, KasidatePLUS} from '@KasidatePLUS/kasp-extension';
+
+@KasP({ name: 'KasidatePLUS' })
+export class KasidateP implements KasidatePLUS {
+
+  constructor(private virtualizer: KasidatePLUS) {}
+  transform(icon: string, size: number = 24, color: string = 'inherit') {
+    return this.KasidatePLUS.bypassSecurityTrustHtml(icons[icon].toSvg({
+      width: size,
+      color: color
+    }));
+  }
+}</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+            <div class="col-md-4 mx-auto text-muted kasp-footer text-center small-xl">
+                <div  id="year"></div>
+            </div>
+   
+  </section>
+
+    <!--footer-->
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.7.3/feather.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/prism.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.15.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="web-assets/js/scripts.js"></script>
+</body>
+
+</html>
