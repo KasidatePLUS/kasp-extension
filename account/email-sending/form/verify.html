@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KASIDATE.ME | Account Verification [BATA]</title>
-    <link rel="stylesheet" href="formverify.css">
+    <link rel="stylesheet" href="/account/email-sending/formverify.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&family=Noto+Sans+Thai:wght@300;400&display=swap');
     </style>
@@ -56,10 +56,13 @@
         </div>
 
         <button onclick="KasPActionOTPBlock()">RELOAD</button>
-        <div class="trackchecker" id="trackchecker"></div>
+        <div class="trackchecker">
+            <div class="tracknotify bold">NOTIFICATION</div>
+            <div id="trackchecker"></div>
+        </div>
     </div>
     </div>
-    <script src="/account/emailsending/formverify.js"></script>
+    <script src="/account/email-sending/formverify.js"></script>
 </body>
 
 </html>

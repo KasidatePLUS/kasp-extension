@@ -82,3 +82,9 @@ label{
 .bold{
     font-weight: bold;
 }
+.trackchecker{
+  background-color: rgba(129, 153, 104, 0.438);
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+}
