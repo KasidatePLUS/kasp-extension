@@ -50,10 +50,10 @@ function otpTrackFunction() {
     var trackresult = document.getElementById("otpforminput").value;
     if (trackresult == null) {
         document.getElementById("trackresult").innerText = "trackresult";
-        console.log(trackresult);
     } else if (sendotp === trackresult) {
         document.getElementById("trackchecker").innerText = "welcome";
     } else {
         document.getElementById("trackchecker").innerText = "try again";
     }
 }
+
