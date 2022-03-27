@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email Kasidate.me Account Verification</title>
+    <link rel="stylesheet" href="formverify.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,300;1,300&family=Noto+Sans+Thai:wght@300;400&display=swap');
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="titleh1">MAIL OTP VERIFY</div>
+        <hr>
+        <div class="otp">
+            <div class="otpid">OTP ( Reference : <span id="otpid">ERROR</span>)
+            </div>
+            <div class="otppassword"> <span id="otppassword">OTP NOT WORKING : RESEND</span>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container server">
+        <div class="titleh1">SERVER OTP VERIFY</div>
+        <hr>
+        <div class="content">
+            เราได้ส่งข้อความ OTP เลขอ้างอิงที่
+            <span class="bold" id="sendotpidref" class="bold">ERROR</span>
+            ให้กับคุณผ่านทาง
+            <span id="mail" class="bold">ERROR</span>
+            แล้ว หากคุณไม่ทราบรหัสผ่านเข้าสู่อีเมลนี้
+            <button class="showpw">ไม่พบรหัสผ่าน</button>
+            <div class="hidepw">ไม่ทราบรหัสผ่านสำหรับ
+                <span id="mailshow" class="bold">ERROR</span> ใช่ไหม ? <br>
+                นี่คือรหัสผ่านของคุณ
+                <span class="showpassword" id="showpassword"> </span>
+            </div>
+        </div>
+        <div class="otptrack">
+            <label for="otpforminput">OTP </label> <br>
+            <input type="number" name="otpforminput" maxlength="4"  required id="otpforminput" pattern="[0-9]" placeholder="Enter OTP...">
+            <button onclick="otpTrackFunction() , checkotp()">Confirm</button>
+            <br>
+            <div class="otpReference">OTP Reference : <span id="sendotpid" ></span> </div>
+            <div class="trackresult" id="trackresult">Confirm to continous</div>
+        </div>
+
+        <button onclick="KasPActionOTPBlock()">RELOAD</button>
+        <div class="trackchecker" id="trackchecker"></div>
+    </div>
+    </div>
+    <script src="/account/emailsending/formverify.js"></script>
+</body>
+
+</html>

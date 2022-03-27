@@ -1,0 +1,85 @@
+body {
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+.container {
+  margin: 30px;
+  width: 500px;
+  background-color: rgba(177, 200, 219, 0.692);
+  padding: 20px;
+}
+.server{
+    margin: 30px;
+    width: 500px;
+    background-color: rgba(51, 53, 54, 0.192);
+    padding: 20px;
+  }
+.titleh1 {
+  font-size: 20px;
+  font-weight: 800;
+}
+hr{
+    width: 100%;
+}
+.otp {
+  background-color: rgb(255, 255, 255);
+  margin: 20px;
+  font-size: larger;
+  border-radius: 8px;
+  padding: 8px;
+}
+.otppassword {
+  font-size: 40px;
+}
+.hidepw {
+  display: none;
+}
+
+.showpw:hover + .hidepw {
+  display: block;
+  color: red;
+  background-color: rgba(249, 252, 253, 0.945);
+  padding: 5px;
+  border-radius: 10px;
+  margin-top: 10px;
+  z-index: 2;
+  position: absolute;
+  width: 400px;
+  border-color: black;
+  border-width: 10px;
+}
+.showpassword {
+  font-weight: 700;
+  padding: 3px;
+  border-radius: 10px;
+}
+.content {
+  font-size: 16px;
+}
+button {
+  background-color: rgb(240, 232, 222);
+  font-family: "Kanit", sans-serif;
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 16px;
+  border-radius: 8px;
+}
+.otptrack{
+  background-color: rgb(255, 255, 255);
+  margin: 10px;
+  border-radius: 8px;
+  padding: 8px;
+}
+input{
+    border-radius: 10px;
+    font-size: 18px;
+}
+label{
+    font-size: 12px;
+}
+.otpReference{
+    float: right;
+    margin-top: 5px;
+}
+.bold{
+    font-weight: bold;
+}

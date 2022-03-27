@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>server Kasidate.me Account Verification</title>
+    <link rel="stylesheet" href="/account/emailsending/formverify.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="titleh1">SERVER OTP VERIFY</div>
+
+        <div class="otp">
+            <div class="otpid">OTP ( <span id="otpid">ERROR</span>) 
+            </div>
+            <form class="otptrack" id="otptrack"> 
+                <label for="otpforminput">OTP :</label>
+                <input type="text" name="otpforminput" id="otpforminput">
+            <input type="button" onclick="otpTrackFunction()" value="Check now">
+            </from>     
+            <div class="trackresult" id="trackresult"></div>
+            </div>
+          <button onclick="location.reload()">RELOAD</button>  
+        </div>
+    </div>
+    <script src="/account/emailsending/formverify.js"></script>
+    <script src="/account/emailsending/email-tempaccount.js"></script>
+</body>
+
+
+
+</html>
