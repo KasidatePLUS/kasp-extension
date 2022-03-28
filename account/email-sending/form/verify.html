@@ -13,21 +13,61 @@
 </head>
 
 <body>
+    <div class="container userregister">
+        <div class="titleh1">Sign Up an Account</div>
+        <hr>
+        <div class="content"></div>
+        <div class="regis-contain">
+
+            <label for="usernameregis">Username</label> <br>
+            <input type="text" name="usernameregis" id="usernameregis" value="" required placeholder="Enter username">
+            <br>
+
+            <label for="mailregis">Password</label> <br>
+            <input type="password" name="passwordregis" id="passwordregis" value="" required
+                placeholder="Enter password">
+            <div class="showpwfornull">SHOW PASSWORD : <span id="passwordvaluedisplay">{Hide}</span></div>
+            <div class="g-recaptcha" data-sitekey="6LfIiB0fAAAAAOuifPT1Vh7DCJS6htSIW2cyO2zQ" class="showpw"></div>
+            <button onclick="regismailpassword()">Sign Up</button> <br>
+            <div class="content">นี่คือ E-mail สำหรับการเข้าใช้งานของคุณในครั้งนี้</div>
+            <input type="email" name="mailregis" id="mailregis" disabled placeholder="username.xx@temp.kasidate.me">
+            <button onclick="copyfunction()">COPY</button> <br>
+            <div class="showpwfornull">
+                <span id="actioncopieddisplay">###</span>
+            </div>
+            <div class="content">ในการดำเนินการขั้นต่อไป คุณสามารถใช้ E-Mail และ Password
+                ที่ระบุไว้ในหน้านี้เพื่อเข้าสู่ระบบกล่องจดหมายบน
+                <a href="http://tempr.email">temp.kasidate.me</a>
+                สำหรับรับ OTP เพื่อดำเนินการในขั้นตอนต่อไป
+                <dl>ไม่ต้องกังวลด้านความปลอดภัย กล่องจดหมายจะถูกลบโดยอัตโนมัติหลังจากไม่มีการใช้งาน 10 นาที</dl>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
         <div class="titleh1">MAIL OTP VERIFY</div>
         <hr>
+        <div class="content">นี่คือ One Time Password สำหรับการดำเนินการยืนยันเข้าใช้งานของ บนเว็บไซต์ <a
+                href="https://dev.kasidate.me"> dev.kasidate.me</a> กรุณาใช้รหัสนี้ยืนยันการเข้าใช้งานภายใน 10
+            นาทีหลังจากได้รับรหัสนี้</div>
         <div class="otp">
             <div class="otpid">
-                OTP ( Reference : 
+                OTP ( Reference :
                 <span id="otpid">ERROR</span>
                 )
             </div>
-            <div class="otppassword"> 
+            <div class="otppassword">
                 <span id="otppassword">
                     OTP NOT WORKING : RESEND
                 </span>
             </div>
         </div>
+        <div class="content">กรุณานำรหัสข้างต้น ไปกรอกบน
+            <a
+                href="https://dev.kasidate.me/account/email-sending/form/verify">https://dev.kasidate.me/account/email-sending/form/verify</a>
+            เพื่อดำเนินการ ในขั้นตอนต่อไป
+        </div>
+
     </div>
 
     <div class="container server">
@@ -39,11 +79,8 @@
             ให้กับคุณผ่านทาง
             <span id="mail" class="bold">ERROR</span>
             แล้ว หากคุณไม่ทราบรหัสผ่านเข้าสู่อีเมลนี้
-            <form action="" method="POST">
-                <div class="g-recaptcha" data-sitekey="6LfIiB0fAAAAAOuifPT1Vh7DCJS6htSIW2cyO2zQ" class="showpw"></div>
-              </form>
-            
-        </button>     <div class="hidepw">ไม่ทราบรหัสผ่านสำหรับ
+            <button class="showpw">ลืมรหัสผ่าน</button>
+            <div class="hidepw">ไม่ทราบรหัสผ่านสำหรับ
                 <span id="mailshow" class="bold">ERROR</span> ใช่ไหม ? <br>
                 นี่คือรหัสผ่านของคุณ
                 <span class="showpassword" id="showpassword"> </span>
@@ -51,7 +88,9 @@
         </div>
         <div class="otptrack">
             <label for="otpforminput">OTP </label> <br>
-            <input type="text" name="otpforminput" pattern="[0-9]{6}" id="otpforminput" placeholder="Enter OTP...">
+            <input type="text" name="otpforminput" ondrop="return false;" onpaste="return false;"
+                onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="6" required " id=" otpforminput"
+                placeholder="Enter OTP...">
             <button onclick="otpTrackFunction() , checkotp()">Confirm</button>
             <br>
             <div class="otpReference">OTP Reference : <span id="sendotpid"></span> </div>

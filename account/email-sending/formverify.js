@@ -1,11 +1,7 @@
 let mail = "testing@temp.kasidate.me";
 let password = "12345678";
-let sendotp ;
-let sendotpid ;
-
-document.getElementById('mail').innerHTML = mail;
-document.getElementById('showpassword').innerHTML = password;
-document.getElementById('mailshow').innerHTML = mail;
+let sendotp;
+let sendotpid;
 
 function makeotpid(length) {
     var otpidresult = '';
@@ -57,3 +53,58 @@ function otpTrackFunction() {
     }
 }
 
+function makeusernameiduniqe(length) {
+    var usernameiduniqeresult = '';
+    var usernameiduniqecharacters = 'abcdefghijklmnopqrstuvwxyz0123456789';
+    var usernameiduniqecharactersLength = usernameiduniqecharacters.length;
+    for (var i = 0; i < length; i++) {
+        usernameiduniqeresult += usernameiduniqecharacters.charAt(Math.floor(Math.random() *
+            usernameiduniqecharactersLength));
+    }
+    return usernameiduniqeresult;
+}
+
+let usernameiduniqe = makeusernameiduniqe(2);
+let usernamefornull = makeusernameiduniqe(8);
+let passwordfornull = makeusernameiduniqe(8);
+let globalpassword;
+let globalusername;
+let globalmail;
+
+function regismailpassword() {
+    var getuservalue = document.getElementById("usernameregis").value;
+    var getusernameregis
+    if (getuservalue === "") {
+        getusernameregis = usernamefornull;
+    } else {
+        getusernameregis = getuservalue;
+    };
+
+    var getpasswordvalue = document.getElementById("passwordregis").value;
+    var getpasswordregis
+    if (getpasswordvalue === "") {
+        getpasswordregis = passwordfornull;
+        document.getElementById("passwordregis").value = passwordfornull;
+        document.getElementById("passwordvaluedisplay").innerText = passwordfornull;
+    } else {
+        getpasswordregis = getpasswordvalue;
+    };
+    globalusername = getusernameregis;
+    globalpassword = getpasswordregis;
+
+
+    var sa = getusernameregis + "." + usernameiduniqe + "@temp.kasidate.me";
+    document.getElementById("mailregis").value = sa;
+    globalmail = sa;
+}
+
+function copyfunction() {
+    navigator.clipboard.writeText(document.getElementById("mailregis").value);
+    document.getElementById("actioncopieddisplay").innerText = "Copied the text: " + document.getElementById("mailregis").value;
+    console.log(globalpassword);
+    console.log(globalusername);
+
+    document.getElementById('mail').innerText = globalmail;
+    document.getElementById('showpassword').innerText = globalpassword;
+    document.getElementById('mailshow').innerText = globalmail;
+}

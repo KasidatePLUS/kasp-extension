@@ -88,3 +88,33 @@ label{
   margin-top: 15px;
   border-radius: 5px;
 }
+.userregister{
+  background-color: rgba(210, 105, 30, 0.301);
+}
+.regis-contain{
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+  margin: 20px;
+}
+form{
+  margin: auto;
+}
+input{
+  color: rgb(94, 94, 99);
+  background-color: bisque;
+  width: 90%;
+  margin-bottom: 10px;
+}
+#otpforminput{
+  color: rgb(94, 94, 99);
+  background-color: bisque;
+  width: 30%;
+  margin-bottom: 10px;
+}
+#otpforminput:placeholder-shown{
+  font-size: 18px;
+}
+#mailregis{
+  width: 70%;
+}
