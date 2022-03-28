@@ -39,8 +39,11 @@
             ให้กับคุณผ่านทาง
             <span id="mail" class="bold">ERROR</span>
             แล้ว หากคุณไม่ทราบรหัสผ่านเข้าสู่อีเมลนี้
-            <button class="showpw">ไม่พบรหัสผ่าน</button>
-            <div class="hidepw">ไม่ทราบรหัสผ่านสำหรับ
+            <form action="" method="POST">
+                <div class="g-recaptcha" data-sitekey="6LfIiB0fAAAAAOuifPT1Vh7DCJS6htSIW2cyO2zQ" class="showpw"></div>
+              </form>
+            
+        </button>     <div class="hidepw">ไม่ทราบรหัสผ่านสำหรับ
                 <span id="mailshow" class="bold">ERROR</span> ใช่ไหม ? <br>
                 นี่คือรหัสผ่านของคุณ
                 <span class="showpassword" id="showpassword"> </span>
@@ -63,6 +66,8 @@
     </div>
     </div>
     <script src="/account/email-sending/formverify.js"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+
 </body>
 
 </html>
