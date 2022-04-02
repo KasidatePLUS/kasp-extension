@@ -89,9 +89,9 @@
         <div class="otptrack">
             <label for="otpforminput">OTP </label> <br>
             <input type="text" name="otpforminput" ondrop="return false;" onpaste="return false;"
-                onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="6" required " id=" otpforminput"
+                onkeypress="return event.charCode>=48 && event.charCode<=57" maxlength="6" minlength="6" id="otpforminput"
                 placeholder="Enter OTP...">
-            <button onclick="otpTrackFunction() , checkotp()">Confirm</button>
+            <button onclick="otpTrackFunction()">Confirm</button>
             <br>
             <div class="otpReference">OTP Reference : <span id="sendotpid"></span> </div>
             <div class="trackresult" id="trackresult">Confirm to continous</div>
@@ -100,10 +100,76 @@
         <button onclick="KasPActionOTPBlock()">RELOAD</button>
         <div class="trackchecker">
             <div class="tracknotify bold">NOTIFICATION</div>
-            <div id="trackchecker"></div>
+            <div id="trackchecker">.</div>
         </div>
     </div>
+    <div class="container userlogin">
+        <div class="titleh1">Sign In an Account</div>
+        <hr>
+        <div class="content"></div>
+        <div class="login-contain">
+
+            <label for="usernamelogin">Username</label> <br>
+            <input type="text" name="usernamelogin" id="usernamelogin"  required placeholder="Enter username">
+            <br>
+
+            <label for="maillogin">Password</label> <br>
+            <input type="password" name="passwordlogin" id="passwordlogin"  required
+                placeholder="Enter password">
+
+            <div class="smsotptrack">
+                <label for="otpforminput">OTP  Reference : <span id="smssendotpidref">NO DATA</span> </label> <br>
+                <input type="text" name="smsotpforminput" ondrop="return false;" onpaste="return false;"
+                    onkeypress="return event.charCode>=48 && event.charCode<=57" minlength="6" maxlength="6" 
+                    id="smsotpforminput" placeholder="Enter OTP...">
+                <button onclick="smsotpTrackFunction()">Confirm</button>
+                <div id="smstrackchecker"></div>
+                <br>
+            </div>
+
+            <div class="g-recaptcha" data-sitekey="6LfIiB0fAAAAAOuifPT1Vh7DCJS6htSIW2cyO2zQ" class="showpw"></div>
+
+            <button onclick="loginmailpassword()">Sign In</button> <br>
+            <div class="content">ในการดำเนินการขั้นต่อไป คุณสามารถใช้ E-Mail และ Password
+                ที่ระบุไว้ในหน้านี้เพื่อเข้าสู่ระบบกล่องจดหมายบน
+                <a href="http://tempr.email">temp.kasidate.me</a>
+                สำหรับรับ OTP เพื่อดำเนินการในขั้นตอนต่อไป
+            </div>
+            <div id="loginstatus"></div>
+        </div>
     </div>
+    <div class="container">
+        <div class="titleh1">SMS OTP VERIFY</div>
+        <hr>
+        <div class="otp">
+            <div class="otpid">
+                OTP ( Reference :
+                <span id="smsotpid">ERROR</span>
+                )
+            </div>
+            <div class="otppassword">
+                <span id="smsotppassword">
+                    OTP NOT WORKING : RESEND
+                </span>
+            </div>
+            <div class="content">นี่คือ OTP สำหรับการดำเนินการเข้าใช้งานบนเว็บไซต์ <a href="https://dev.kasidate.me">
+                    dev.kasidate.me</a> กรุณาใช้รหัสนี้ยืนยันการเข้าใช้งานภายใน 10
+                นาทีหลังจากได้รับรหัสนี้</div>
+            <hr>
+            <div class="content bold"> 2 Min
+                <div class="dot"></div>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AIS
+            </div>
+        </div>
+        <div class="content">กรุณานำรหัสข้างต้น ไปกรอกบน
+            <a
+                href="https://dev.kasidate.me/account/email-sending/form/verify">https://dev.kasidate.me/account/email-sending/form/verify</a>
+            เพื่อดำเนินการ ในขั้นตอนต่อไป
+        </div>
+       
+    </div>
+
+
     <script src="/account/email-sending/formverify.js"></script>
     <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 

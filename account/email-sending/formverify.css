@@ -68,6 +68,11 @@ button {
   border-radius: 8px;
   padding: 8px;
 }
+.smsotptrack{
+  background-color: rgba(202, 143, 143, 0.342);
+  border-radius: 8px;
+  padding: 8px;
+}
 input{
     border-radius: 10px;
     font-size: 18px;
@@ -117,4 +122,15 @@ input{
 }
 #mailregis{
   width: 70%;
+}
+.dot{
+  background-color: black;
+  border-radius: 100%;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  z-index: 2;
+  margin-top: 7px;
+  margin-left: 5px;
 }
