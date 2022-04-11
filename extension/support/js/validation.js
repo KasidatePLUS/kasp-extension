@@ -49,8 +49,8 @@ function zf_ValidateAndSubmit(){
 				  	}else{
 				  		var checkedValsCount = 0;
 						var inpChoiceElems = fieldObj;
-							for(var ii = 0; ii < inpChoiceElems.length ; ii ++ ){
-						      	if(inpChoiceElems[ii].checked === true ){
+							for(const element of inpChoiceElems){
+						      	if(element.checked === true ){
 						      		checkedValsCount ++;
 						      	}
 							}
@@ -204,11 +204,10 @@ function zf_ValidateAndSubmit(){
                     check = 1;
                 }
             }
-            if (check == 0) {
-                return true;
-            } else {
-                return false;
-            }
+			
+            if (check == 0) return true;
+             else  return false;
+            
         } else {
             return true;
         }
